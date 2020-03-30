@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import NavBar from './NavBar';
 
 function Header () {
   return (
@@ -7,6 +8,7 @@ function Header () {
       <h1>
         Ma super application React
       </h1>
+      <NavBar />
     </header>
   );
 }
