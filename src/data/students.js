@@ -133,26 +133,3 @@ export const studentsRawData = [
         "p1bisPresented": false
     }
 ];
-
-class Student {
-    constructor(props) {
-        for(let key in props) {
-            this[key] = props[key];
-        }
-    }
-
-    get githubUserName() {
-        const accountUrlParts = this.githubAccountUrl.split('/')
-        return accountUrlParts[accountUrlParts.length - 1];
-    }
-
-    get avatarUrl() {
-        return `https://github.com/${this.githubUserName}.png`;
-    }
-
-    get fullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-}
-
-export default studentsRawData.map(rawStudentData => new Student(rawStudentData));
