@@ -1,20 +1,23 @@
 import React from 'react';
-import './Main.css';
 import HomePage from './Home';
 import {
   Switch,
   Route
 } from 'react-router-dom';
 import StudentsPage from './StudentsPage';
+import StudentDetailsPage from "./StudentDetailsPage";
 
 function Main () {
   return (
     <main>
       <Switch>
-        <Route path='/students'>
+        <Route exact path='/students'>
           <StudentsPage />
         </Route>
-        <Route path='/'>
+        <Route exact path='/students/:githubAccountName'>
+          {props => <StudentDetailsPage {...props} />}
+        </Route>
+        <Route exact path='/'>
           <HomePage />
         </Route>
       </Switch>

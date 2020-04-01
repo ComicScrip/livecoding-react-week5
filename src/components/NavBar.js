@@ -1,13 +1,12 @@
 import React from 'react';
-import './NavBar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar () {
   return (
     <nav>
       <ul>
-        <li><Link to='/'>Accueil</Link></li>
-        <li><Link to='/students'>Students</Link></li>
+        <li><NavLink  exact to='/'>Accueil</NavLink></li>
+        <li><NavLink exact to='/students'>Students</NavLink></li>
       </ul>
     </nav>
   );

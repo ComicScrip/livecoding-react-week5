@@ -1,9 +1,11 @@
 import React from 'react';
+import StudentsTable from "./StudentsTable";
 
 export default function StudentsPage () {
   return (
     <div>
-      students page
+        <h2>Liste des étudiants</h2>
+        <StudentsTable />
     </div>
   );
 }
